@@ -1,0 +1,129 @@
+。
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-store">
+    <title>天福茗茶</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF4B4B',
+                        secondary: '#FFE9E9'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '2px',
+                        DEFAULT: '4px',
+                        'md': '8px',
+                        'lg': '12px',
+                        'xl': '16px',
+                        '2xl': '20px',
+                        '3xl': '24px',
+                        'full': '9999px',
+                        'button': '4px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <nav class="fixed top-0 left-0 w-full bg-white z-50 border-b border-gray-100">
+        <div class="flex items-center justify-between px-4 h-[44px]">
+            <a href="./my.html" class="flex items-center">
+            <button class="flex items-center justify-center w-[24px] h-[24px]">
+                <i class="fas fa-chevron-left text-gray-800"></i>
+            </button>
+            </a>
+            <h1 class="text-[17px] font-medium">我的优惠券</h1>
+            <div class="flex gap-4">
+                <button class="flex items-center justify-center w-[24px] h-[24px]">
+                    <i class="fas fa-ellipsis-h text-gray-800"></i>
+                </button>
+                <button class="flex items-center justify-center w-[24px] h-[24px]">
+                    <i class="fas fa-qrcode text-gray-800"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="px-4 pt-[60px] pb-[100px]">
+        <h2 class="text-xl font-medium mb-4">优惠券</h2>
+        
+        <div class="space-y-4">
+            <div class="bg-white rounded-lg shadow-sm">
+                <div class="flex p-4 items-center justify-between border-b border-dashed border-gray-200">
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-3xl font-medium text-primary">5</span>
+                        <span class="text-sm text-primary">元</span>
+                    </div>
+                    <div class="flex-1 ml-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-gray-900">端午饮茶优惠 ×4</h3>
+                            <span class="text-xs text-amber-500">新获得</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">满 50 元使用</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between p-3">
+                    <span class="text-xs text-gray-500">2025-05-29 至 2025-06-04</span>
+                    <div class="flex items-center gap-3">
+                        <button class="text-gray-500 text-sm flex items-center gap-1">
+                            <i class="fas fa-qrcode"></i>
+                            核销码
+                        </button>
+                        <button class="px-4 py-1.5 bg-secondary text-primary text-sm !rounded-button">
+                            去使用
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-sm">
+                <div class="flex p-4 items-center justify-between border-b border-dashed border-gray-200">
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-3xl font-medium text-primary">20</span>
+                        <span class="text-sm text-primary">元</span>
+                    </div>
+                    <div class="flex-1 ml-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-gray-900">新客到店礼券</h3>
+                            <span class="text-xs text-amber-500">新获得</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">满 100 元使用</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between p-3">
+                    <span class="text-xs text-gray-500">2025-05-10 至 2025-08-17</span>
+                    <div class="flex items-center gap-3">
+                        <button class="text-gray-500 text-sm flex items-center gap-1">
+                            <i class="fas fa-qrcode"></i>
+                            核销码
+                        </button>
+                        <button class="px-4 py-1.5 bg-secondary text-primary text-sm !rounded-button">
+                            去使用
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 text-center">
+            <a href="#" class="text-sm text-gray-500">查看失效的券码 ></a>
+        </div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-100">
+        <button class="w-full py-4 text-primary font-medium">
+            兑换优惠码
+        </button>
+    </footer>
+</body>
+</html>

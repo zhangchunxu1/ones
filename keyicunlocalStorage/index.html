@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-store">
+    <title>天福茗茶</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3a6b3f',
+                        secondary: '#8BC34A'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '2px',
+                        DEFAULT: '4px',
+                        'md': '8px',
+                        'lg': '12px',
+                        'xl': '16px',
+                        '2xl': '20px',
+                        '3xl': '24px',
+                        'full': '9999px',
+                        'button': '4px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .fixed-nav {
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 min-h-[1024px]">
+    <!-- 顶部导航 -->
+    <nav
+        class="fixed top-0 left-0 right-0 h-[52px] bg-white border-b border-gray-100 flex items-center justify-between px-4 z-50">
+        <a href="index.html" class="text-gray-600"><i class="fas fa-home text-xl"></i></a>
+        <span class="text-lg font-medium">首页</span>
+        <div class="flex gap-4">
+            <a href="#" class="text-gray-600"><i class="fas fa-qrcode"></i></a>
+            <a href="#" class="text-gray-600"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </nav>
+    <!-- 店铺信息 -->
+    <section class="p-4 bg-white">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-base font-medium">附近门店</h2>
+            <a href="./fujinmendian.html" class="text-sm text-gray-400 flex items-center">
+                查看所有门店 <i class="fas fa-chevron-right ml-1 text-xs"></i>
+            </a>
+        </div>
+        <a href="./fujinmendian.html">
+        <div class="bg-gray-50 rounded-lg p-4">
+            <!-- <img src="./img/shouye.png" class="w-full rounded-lg mb-3"> -->
+            <h3 class="text-base font-medium mb-1">文化馆</h3>
+            <p class="text-sm text-gray-500">距离0.08公里 北京东城区王府井大街金鱼胡同3号</p>
+        </div>
+        </a>
+    </section>
+    <!-- 店铺主图 -->
+    <div class="relative w-full overflow-hidden">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="height: 262.938px;">
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <img src="https://ai-public.mastergo.com/ai/img_res/9e894aef49851877bb9c6ee4be64340f.jpg"
+                            alt="茶具展示 1" class="w-full h-full object-cover object-center " style="height: 262.938px;">
+                    </div>
+                </div>
+                <!-- 添加更多的 swiper-slide 来包含更多的图片 -->
+                <div class="swiper-slide" style="height: 262.938px;">
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <img src="./img/cha1.jpg"
+                            alt="茶具展示 2" class="w-full h-full object-cover object-center " style="height: 262.938px;">
+                    </div>
+                </div>
+                <div class="swiper-slide" style="height: 262.938px;">
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <img src="./img/cha2.jpg"
+                            alt="茶具展示 3" class="w-full h-full object-cover object-center" style="height: 262.938px;">
+                    </div>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <!-- <div class="relative w-full overflow-hidden">
+                <div class="bg-gray-50 rounded-lg p-4">
+    <img src="https://ai-public.mastergo.com/ai/img_res/9e894aef49851877bb9c6ee4be64340f.jpg"
+    alt="茶具展示"
+    class="w-full h-full object-cover object-center">
+            
+        </div>
+
+    </div> -->
+    <!-- 会员权益 -->
+    <div class="max-w-6xl mx-auto px-4 py-6">
+        <div class="bg-primary rounded-lg p-4 text-white">
+            <a href="./huiyuan.html">
+                <h2 class="text-lg font-semibold mb-3">会员权益</h2>
+                <div class="flex space-x-3 mb-4">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3 flex-1">
+                        <p class="text-sm">5元无门槛券</p>
+                        <p class="text-xs opacity-80">有效期至2023-12-31</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3 flex-1">
+                        <p class="text-sm">20元满300可用</p>
+                        <p class="text-xs opacity-80">有效期至2023-12-31</p>
+                    </div>
+                </div>
+            </a>
+            <a href="./zhanghuyue.html">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-sm">充500得510</p>
+                        <p class="text-xl font-bold">510</p>
+                        <p class="text-xs opacity-80">储值享好礼，购物更划算</p>
+                    </div>
+                    <button
+                        class="bg-white text-primary px-4 py-2 rounded-button whitespace-nowrap text-sm font-medium">
+                        去充值
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- 新品推荐 -->
+    <div class="max-w-6xl mx-auto px-4 py-6">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-semibold">新品推荐</h2>
+            <a href="./shopping.html" class="text-primary text-sm">查看更多</a>
+        </div>
+        <div class="relative">
+            <div class="overflow-x-auto scroll-hide">
+                <div class="flex space-x-4 pb-2">
+                    <!-- 商品1 -->
+
+                    <a href="./shangpinxiangqing.html"
+                        class="product-card bg-white rounded-lg shadow-sm p-3 w-40 flex-shrink-0 transition-all duration-300">
+                        <div class="relative">
+                            <img src="https://ai-public.mastergo.com/ai/img_res/9422ba08dd6570e757f4c36a11123f75.jpg"
+                                alt="龙井茶叶" class="w-full h-32 object-cover rounded-lg">
+                            <span
+                                class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">新品</span>
+                        </div>
+                        <h3 class="text-sm font-medium mt-2 truncate">西湖龙井50g</h3>
+                        <div class="flex justify-between items-center mt-1">
+                            <p class="text-primary font-semibold">¥298</p>
+                            <button class="text-primary">
+                                <i class="fas fa-plus-circle w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </a>
+
+                    <!-- 商品2 -->
+
+                    <a href="./shangpinxiangqing.html"
+                        class="product-card bg-white rounded-lg shadow-sm p-3 w-40 flex-shrink-0 transition-all duration-300">
+                        <div class="relative">
+                            <img src="https://ai-public.mastergo.com/ai/img_res/b22aafde7d998defe3e1a26e796c4a39.jpg"
+                                alt="新品茶具" class="w-full h-32 object-cover rounded-lg">
+                            <span
+                                class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">新品</span>
+                        </div>
+                        <h3 class="text-sm font-medium mt-2 truncate">渐变蓝茶杯三件套</h3>
+                        <div class="flex justify-between items-center mt-1">
+                            <p class="text-primary font-semibold">¥298</p>
+                            <button class="text-primary">
+                                <i class="fas fa-plus-circle w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </a>
+
+                    <!-- 商品3 -->
+
+                    <a href="./shangpinxiangqing.html"
+                        class="product-card bg-white rounded-lg shadow-sm p-3 w-40 flex-shrink-0 transition-all duration-300">
+                        <div class="relative">
+                            <img src="https://ai-public.mastergo.com/ai/img_res/b2190245d8eddc56d30fc58983c32987.jpg"
+                                alt="铁观音茶叶" class="w-full h-32 object-cover rounded-lg">
+                            <span
+                                class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">新品</span>
+                        </div>
+                        <h3 class="text-sm font-medium mt-2 truncate">安溪铁观音100g</h3>
+                        <div class="flex justify-between items-center mt-1">
+                            <p class="text-primary font-semibold">¥198</p>
+                            <button class="text-primary">
+                                <i class="fas fa-plus-circle w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </a>
+
+                    <!-- 商品4 -->
+
+                    <a href="./shangpinxiangqing.html"
+                        class="product-card bg-white rounded-lg shadow-sm p-3 w-40 flex-shrink-0 transition-all duration-300">
+                        <div class="relative">
+                            <img src="https://ai-public.mastergo.com/ai/img_res/be45b1193d9fd7eadccd88671113d99a.jpg"
+                                alt="新品茶具" class="w-full h-32 object-cover rounded-lg">
+                            <span
+                                class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">新品</span>
+                        </div>
+                        <h3 class="text-sm font-medium mt-2 truncate">玻璃茶漏</h3>
+                        <div class="flex justify-between items-center mt-1">
+                            <p class="text-primary font-semibold">¥88</p>
+                            <button class="text-primary">
+                                <i class="fas fa-plus-circle w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </a>
+
+                    <!-- 商品5 -->
+
+                    <a href="./shangpinxiangqing.html"
+                        class="product-card bg-white rounded-lg shadow-sm p-3 w-40 flex-shrink-0 transition-all duration-300">
+                        <div class="relative">
+                            <img src="https://ai-public.mastergo.com/ai/img_res/2cd02c4e7710b872450feadeeed9ec7d.jpg"
+                                alt="新品茶具" class="w-full h-32 object-cover rounded-lg">
+                            <span
+                                class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">新品</span>
+                        </div>
+                        <h3 class="text-sm font-medium mt-2 truncate">竹制茶盘</h3>
+                        <div class="flex justify-between items-center mt-1">
+                            <p class="text-primary font-semibold">¥198</p>
+                            <button class="text-primary">
+                                <i class="fas fa-plus-circle w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 礼盒选购指南 -->
+    <div class="max-w-6xl mx-auto px-4 py-6">
+        <h2 class="text-lg font-semibold mb-4">礼盒选购指南</h2>
+        <a href="./shangpinxiangqing.html">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- 礼盒1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <a href="./shangpinxiangqing.html"><img
+                            src="https://ai-public.mastergo.com/ai/img_res/fbee54ae646c945737f93e0929b9d74c.jpg"
+                            alt="茶具礼盒" class="w-full h-48 object-cover"></a>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">经典商务茶具礼盒</h3>
+                        <p class="text-gray-600 text-sm mt-1">包含茶壶1个、茶杯4个、茶漏1个、茶盘1个</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <p class="text-primary font-semibold text-lg">¥598</p>
+                            <button
+                                class="bg-primary text-white px-4 py-2 rounded-button whitespace-nowrap text-sm font-medium">
+                                加入购物车
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- 礼盒2 -->
+            <a href="./shangpinxiangqing.html">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/a6d5999c6d78611182905b2fea20dd20.jpg" alt="茶具礼盒"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">婚庆红瓷茶具礼盒</h3>
+                        <p class="text-gray-600 text-sm mt-1">包含茶壶1个、茶杯6个、茶盘1个、茶叶罐1个</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <p class="text-primary font-semibold text-lg">¥888</p>
+                            <button
+                                class="bg-primary text-white px-4 py-2 rounded-button whitespace-nowrap text-sm font-medium">
+                                加入购物车
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 企业定制专区 -->
+    <a href="./lihe.html">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="bg-gradient-to-r from-primary to-secondary rounded-lg p-6 text-white">
+                <h2 class="text-xl font-semibold mb-2">企业定制专区</h2>
+                <p class="text-sm mb-4">为企业客户提供专属定制服务，打造独特品牌形象</p>
+                <button class="bg-white text-primary px-6 py-2 rounded-button whitespace-nowrap font-medium">
+                    <a href="./lihe.html"> 立即咨询</a>
+                </button>
+            </div>
+        </div>
+    </a>
+    <!-- 经典搭配区 -->
+    <div class="max-w-6xl mx-auto px-4 py-6">
+        <h2 class="text-lg font-semibold mb-4">经典搭配</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- 搭配1 -->
+            <a href="./shangpinxiangqing.html">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/bdf0cba42d7cfa88b5784d32e16e0e23.jpg" alt="茶具搭配"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">宜兴紫砂茶具套装</h3>
+                        <p class="text-gray-600 text-sm mt-1">精选宜兴原矿紫砂，透气性好，适合冲泡各类茶叶</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <p class="text-primary font-semibold text-lg">¥1,280</p>
+                            <button
+                                class="border border-primary text-primary px-4 py-2 rounded-button whitespace-nowrap text-sm font-medium">
+                                查看详情
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- 搭配2 -->
+            <a href="./shangpinxiangqing.html">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/82c282819d65a9b1af1da294031167fc.jpg" alt="茶具搭配"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">白瓷茶具+茶盒套装</h3>
+                        <p class="text-gray-600 text-sm mt-1">简约白瓷搭配实木茶盒，现代与传统完美结合</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <p class="text-primary font-semibold text-lg">¥658</p>
+                            <button
+                                class="border border-primary text-primary px-4 py-2 rounded-button whitespace-nowrap text-sm font-medium">
+                                查看详情
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="./shangpinxiangqing.html">
+                <!-- 搭配3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <img src="https://ai-public.mastergo.com/ai/img_res/306c4a005cee49050da881d669281863.jpg" alt="茶具搭配"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">便携旅行茶具套装</h3>
+                        <p class="text-gray-600 text-sm mt-1">轻巧便携设计，随时随地享受茶道乐趣</p>
+                        <div class="flex justify-between items-center mt-3">
+                            <p class="text-primary font-semibold text-lg">¥328</p>
+                            <button
+                                class="border border-primary text-primary px-4 py-2 rounded-button whitespace-nowrap text-sm font-medium">
+                                查看详情
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- 底部固定导航 -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white fixed-nav py-2">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-around">
+                <a href="./index.html" class="flex flex-col items-center" style="color:#3a6b3f">
+                    <!-- <i class="fas fa-home w-6 h-6"></i> -->
+                    <svg t="1746859131566" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="3464" width="24" height="24">
+                        <path
+                            d="M797.3 960.2H224.6c-18.8 0-34.2-15.3-34.2-34.2V544.3H99.9c-14.2 0-26.7-8.5-31.8-21.7-5.1-12.9-1.9-27.3 7.9-36.9L488.5 74l0.4-0.4c13-12.1 33.4-12 46.4 0l0.9 0.8 412.1 411.3c9.9 9.6 13 24 7.9 36.9-5.2 13.2-17.7 21.7-31.8 21.7h-93V926c0 18.9-15.3 34.2-34.1 34.2z m-542.9-64h513V514.4c0-18.8 15.3-34.2 34.2-34.2h50.7L512.1 140.8 172 480.3h48.3c18.8 0 34.2 15.3 34.2 34.2v381.7z"
+                            fill="#3a6b3f" p-id="3465"></path>
+                        <path
+                            d="M639.9 800.2H384.3c-17.7 0-32-14.3-32-32s14.3-32 32-32H640c17.7 0 32 14.3 32 32s-14.4 32-32.1 32z"
+                            fill="#3a6b3f" p-id="3466"></path>
+                    </svg>
+                    <span class="text-xs mt-1">首页</span>
+                </a>
+                <a href="shopping.html" class="flex flex-col items-center text-gray-500">
+                    <svg t="1746859479109" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="3968" width="24" height="24">
+                        <path
+                            d="M896 936.96H128c-22.528 0-40.96-18.432-40.96-40.96V128c0-22.528 18.432-40.96 40.96-40.96h768c22.528 0 40.96 18.432 40.96 40.96v768c0 22.528-18.432 40.96-40.96 40.96zM128 128v768h768V128H128z"
+                            p-id="3969"></path>
+                        <path
+                            d="M512 552.96c-138.24 0-250.88-133.12-250.88-296.96 0-11.264 9.216-20.48 20.48-20.48s20.48 9.216 20.48 20.48c0 141.312 94.208 256 209.92 256s209.92-114.688 209.92-256c0-11.264 9.216-20.48 20.48-20.48s20.48 9.216 20.48 20.48c0 163.328-112.64 296.96-250.88 296.96z"
+                            p-id="3970"></path>
+                    </svg>
+                    <!-- <i class="fas fa-shop w-6 h-6"></i> -->
+                    <span class="text-xs mt-1">商城</span>
+                </a>
+                <a href="./huiyuan.html" class="flex flex-col items-center text-gray-500">
+                    <!-- <i class="fas fa-truck-plane w-6 h-6"></i> -->
+                    <svg t="1746858877114" class="icon" viewBox="0 0 1253 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="3257" width="24" height="24">
+                        <path
+                            d="M625.904416 768.239917a35.522234 35.522234 0 0 1-28.417787-13.924715l-155.445295-205.4606a35.607487 35.607487 0 0 1 56.835574-42.910859L625.904416 673.892864l127.880041-168.233299a35.607487 35.607487 0 1 1 56.835574 42.910859L654.322203 754.031024a35.522234 35.522234 0 0 1-28.417787 14.208893zM1251.095729 159.53092L1064.106691 995.582213a35.806412 35.806412 0 0 1-34.6697 28.417787H222.371841a35.806412 35.806412 0 0 1-34.6697-28.417787L0.713102 159.53092a35.806412 35.806412 0 0 1 16.198139-37.511479A36.090589 36.090589 0 0 1 57.548676 123.440331l258.033506 192.672595L597.486629 13.179317a37.227301 37.227301 0 0 1 56.835574 0l284.17787 302.933609 255.760082-192.672595a35.522234 35.522234 0 0 1 56.835574 36.090589z m-91.221096 78.148914l-208.586556 155.445295a35.238056 35.238056 0 0 1-48.594416-5.967735L625.904416 91.896587l-276.789245 295.260807a35.238056 35.238056 0 0 1-48.594416 5.967735L91.934198 237.679834 250.789628 952.955533h750.229576z"
+                            p-id="3258"></path>
+                    </svg>
+                    <span class="text-xs mt-1">会员中心</span>
+                </a>
+                <a href="./shop.html" class="flex flex-col items-center text-gray-500">
+                    <svg t="1746859502512" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="4176" width="24" height="24">
+                        <path
+                            d="M734.4 703.8c4.7 4.7 10.8 7.1 17 7.1 6.1 0 12.3-2.3 16.9-7 9.4-9.4 9.4-24.6 0-33.9L576.8 478c-9.4-9.4-24.6-9.4-33.9 0-9.4 9.4-9.4 24.6 0 33.9l191.5 191.9zM588.1 734.1c4.7 4.7 10.8 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9l-63.9-63.9c-9.4-9.4-24.6-9.4-33.9 0-9.4 9.4-9.4 24.6 0 33.9l63.8 63.9z"
+                            p-id="4177"></path>
+                        <path
+                            d="M936.1 912h-39.9V382.7l40.2 0.1c8.1 0 15.7-4.1 20.1-10.9 4.4-6.8 5.1-15.4 1.8-22.9L854.1 77.7c-3.9-8.6-12.4-14.2-21.9-14.2H192.1c-9.5 0-18.1 5.6-21.9 14.2L66.5 348.9c-3.3 7.4-2.6 16 1.8 22.9 4.4 6.8 12 10.9 20.1 10.9l39.6-0.1V912H88c-13.3 0-24 10.7-24 24s10.7 24 24 24h848c13.3 0 24-10.7 24-24s-10.7-24-23.9-24z m-87.9-1.5H432.1V382.3l416.1 0.3v527.9zM134.7 334.7c-4.4 0-7.3-4.5-5.5-8.4L206 115.1c1-2.2 3.1-3.6 5.5-3.6h601.3c2.4 0 4.5 1.4 5.5 3.5l77.1 211.2c1.8 4-1.1 8.5-5.5 8.5m-505.8 47.6v528.2h-208V382.6l208-0.3z"
+                            p-id="4178"></path>
+                    </svg>
+                    <!-- <i class="fas fa-store w-6 h-6"></i> -->
+                    <span class="text-xs mt-1">门店</span>
+                </a>
+                <a href="./my.html" class="flex flex-col items-center text-gray-500">
+                    <svg t="1746859529730" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="4384" width="24" height="24">
+                        <path
+                            d="M885.333333 96c23.786667 0 39.253333 25.034667 28.618667 46.314667a7024.8 7024.8 0 0 0-56.917333 116.234666A424.853333 424.853333 0 0 1 938.666667 509.589333c0 235.637333-191.029333 426.666667-426.666667 426.666667s-426.666667-191.029333-426.666667-426.666667c0-235.648 191.029333-426.666667 426.666667-426.666666a424.938667 424.938667 0 0 1 196.544 47.872C762.453333 107.573333 821.482667 96 885.333333 96z m-164.234666 99.381333a32 32 0 0 1-29.696-1.066666A360.821333 360.821333 0 0 0 512 146.933333c-200.298667 0-362.666667 162.368-362.666667 362.666667 0 200.288 162.368 362.666667 362.666667 362.666667s362.666667-162.378667 362.666667-362.666667a360.96 360.96 0 0 0-79.850667-227.061333 32 32 0 0 1-4-33.706667 5870.922667 5870.922667 0 0 1 41.322667-85.589333c-39.786667 4.970667-76.768 15.701333-111.04 32.149333zM330.666667 362.666667a42.666667 42.666667 0 0 1 42.666666 42.666666v64a42.666667 42.666667 0 1 1-85.333333 0v-64a42.666667 42.666667 0 0 1 42.666667-42.666666z m170.666666 0a42.666667 42.666667 0 0 1 42.666667 42.666666v64a42.666667 42.666667 0 1 1-85.333333 0v-64a42.666667 42.666667 0 0 1 42.666666-42.666666z"
+                            fill="#000000" p-id="4385"></path>
+                    </svg>
+                    <!-- <i class="fas fa-user w-6 h-6"></i> -->
+                    <span class="text-xs mt-1">我的</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- 为底部导航留出空间 -->
+    <div class="pb-16"></div>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            // 可选参数
+            direction: 'horizontal',
+            loop: true,
+
+            // 自动播放
+            autoplay: {
+                delay: 3000, // 每3秒切换一次
+                disableOnInteraction: false, // 用户操作后继续自动播放
+            },
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // 如果需要滚动条
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
+        // 商品点击事件
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function (e) {
+                if (e.target.tagName !== 'BUTTON' && e.target.tagName !== 'I') {
+                    // 这里可以添加跳转到商品详情页的逻辑
+                    console.log('跳转到商品详情页');
+                }
+            });
+        });
+        // 购物车按钮点击事件
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.textContent.includes('加入购物车') || btn.innerHTML.includes('fa-plus-circle')) {
+                btn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    // 这里可以添加加入购物车的逻辑
+                    console.log('商品已加入购物车');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
